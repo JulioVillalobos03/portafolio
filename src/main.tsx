@@ -6,7 +6,7 @@ import React from "react";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/portafolio">
       <App />
     </BrowserRouter>
   </React.StrictMode>

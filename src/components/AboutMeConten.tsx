@@ -37,7 +37,7 @@ export default function AboutMeContent() {
                 <div className="flex gap-6 items-center">
                     <div className="w-[100px] aspect-square shrink-0 rounded-full overflow-hidden border-4 border-blue-950 shadow-md">
                         <img
-                            src="/assets/images/my_profile_photo.png"
+                            src={`${import.meta.env.BASE_URL}assets/images/my_profile_photo.png`}
                             alt="Julio Villalobos"
                             className="w-full h-full object-cover"
                         />

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +44,7 @@ export default function Navbar() {
             >
                 <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                     {/* Logo responsivo */}
-                    <Link to="/" className="block max-w-[200px] w-full">
+                    <a href="#inicio" className="block max-w-[200px] w-full">
                         <svg
                             viewBox="0 0 400 100"
                             className="w-full h-auto"
@@ -107,17 +106,17 @@ export default function Navbar() {
                                 }
                             `}</style>
                         </svg>
-                    </Link >
+                    </a >
 
                     {/* Desktop nav */}
                     <nav className="hidden md:flex gap-6 items-center">
-                        <Link
-                            to="/"
+                        <a
+                            href="#inicio"
                             className={`fancy-link transition-colors duration-300 ${isScrolled ? "text-gray-800 dark:text-white" : "text-blue-950 dark:text-white"
                                 }`}
                         >
                             Inicio
-                        </Link>
+                        </a>
                         <a
                             href="#skills"
                             className={`fancy-link transition-colors duration-300 ${isScrolled
@@ -137,7 +136,16 @@ export default function Navbar() {
                             Projectos
                         </a>
                         <a
-                            href="#"
+                            href="#experiencia"
+                            className={`fancy-link transition-colors duration-300 ${isScrolled
+                                ? "text-gray-800 dark:text-white"
+                                : "text-blue-950 dark:text-white"
+                                }`}
+                        >
+                            Experiencia
+                        </a>
+                        <a
+                            href="#contacto"
                             className={`fancy-link transition-colors duration-300 ${isScrolled
                                 ? "text-gray-800 dark:text-white"
                                 : "text-blue-950 dark:text-white"
@@ -201,9 +209,9 @@ export default function Navbar() {
             </header>
 
             <nav className="fixed bottom-0 w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 md:hidden z-50">
-                <div className="grid grid-cols-4 text-xs text-center py-2">
+                <div className="grid grid-cols-5 text-xs text-center py-2">
                     <a
-                        href="/"
+                        href="#inicio"
                         className="flex flex-col items-center justify-center text-gray-700 dark:text-white hover:text-blue-500"
                     >
                         <svg className="w-5 h-5 mb-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -229,17 +237,37 @@ export default function Navbar() {
                         <svg className="w-5 h-5 mb-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5A1.5 1.5 0 014.5 6h15A1.5 1.5 0 0121 7.5v9a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 16.5v-9z" />
                         </svg>
-                        Projects
+                        Projectos
+                    </a>
+                    <a
+                        href="#experiencia"
+                        className="flex flex-col items-center justify-center text-gray-700 dark:text-white hover:text-blue-500"
+                    >
+                        <svg
+                            className="w-5 h-5 mb-1"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 6.75V5.25a1.5 1.5 0 011.5-1.5h0a1.5 1.5 0 011.5 1.5v1.5M21 9.75v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15.75v-6A2.25 2.25 0 015.25 7.5h13.5A2.25 2.25 0 0121 9.75z"
+                            />
+                        </svg>
+                        Experiencia
                     </a>
 
+
                     <a
-                        href="#contact"
+                        href="#contacto"
                         className="flex flex-col items-center justify-center text-gray-700 dark:text-white hover:text-blue-500"
                     >
                         <svg className="w-5 h-5 mb-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25l-9 5.25-9-5.25M21 15.75V8.25a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 8.25v7.5A2.25 2.25 0 005.25 18h13.5A2.25 2.25 0 0021 15.75z" />
                         </svg>
-                        Contact
+                        Contacto
                     </a>
                 </div>
             </nav>

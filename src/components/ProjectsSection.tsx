@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -9,8 +8,8 @@ const projects = [
         description:
             "App móvil y backend que permite a usuarios solicitar viajes seguros, con seguimiento en tiempo real, botones de pánico, y sistema de verificación QR.",
         technologies: ["Flutter", "Spring Boot", "WebSocket", "JWT", "AWS"],
-        image: "/assets/images/vs/vs-1.png",
-        github: "",
+        image: `${import.meta.env.BASE_URL}assets/images/vs/vs-1.png`,
+        github: "https://github.com/JulioVillalobos03/viaja-segura-backend",
         live: "",
     },
     {
@@ -19,8 +18,8 @@ const projects = [
         description:
             "Un portafolio moderno construido con React, Tailwind y GSAP para mostrar mis habilidades y proyectos de forma visual y dinámica.",
         technologies: ["React", "Tailwind", "GSAP", "Vite"],
-        image: "/assets/images/portafolio/portafolio-web.png",
-        github: "",
+        image: `${import.meta.env.BASE_URL}assets/images/portafolio/portafolio-web.png`,
+        github: "https://github.com/JulioVillalobos03/portafolio",
         live: "",
     },
     {
@@ -29,7 +28,7 @@ const projects = [
         description:
         "Sistema empresarial desarrollado con Laravel y Vue.js para centralizar la administración de empleados, empresas, vacaciones y nóminas. Participé como desarrollador Fullstack en la modernización y migración del sistema existente, contribuyendo a mejorar los procesos internos y la eficiencia operativa mediante una interfaz moderna y un backend robusto.",
         technologies: ["Laravel", "Vue.js", "PHP", "JavaScript", "MySQL"],
-        image: "/assets/images/efocushub/efocushub-web.png",
+        image: `${import.meta.env.BASE_URL}assets/images/efocushub/efocushub-web.png`,
         github: "",
         live: "https://e-focushub.com/login",
     },
@@ -50,11 +49,9 @@ export default function ProjectsSection() {
                         {/*<p className="text-sm text-blue-600 dark:text-blue-300 uppercase tracking-wide">
                             Featured Project
                         </p>*/}
-                        <Link to={`/projects/${project.id}`}>
                             <h3 className="text-3xl font-bold hover:underline">
                                 {project.title}
                             </h3>
-                        </Link>
 
                         <div className="bg-white/80 dark:bg-white/10 p-10 rounded-lg text-sm backdrop-blur-md shadow-md">
                             {project.description}
@@ -94,7 +91,6 @@ export default function ProjectsSection() {
 
                     {/* Imagen */}
                     <div className="md:w-1/2">
-                        <Link to={`/projects/${project.id}`}>
                             <img
                                 src={project.image}
                                 alt={project.title}
@@ -104,7 +100,7 @@ export default function ProjectsSection() {
                                     minHeight: "320px",
                                 }}
                             />
-                        </Link>
+                     
                     </div>
                 </div>
             ))}

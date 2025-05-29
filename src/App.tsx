@@ -4,7 +4,6 @@ import './App.css';
 
 import LogoPreloader from './components/LogoPreloader';
 import Home from './pages/Home';
-import ProjectDetail from "./components/ProjectDetail";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +28,6 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
     </>
   );
