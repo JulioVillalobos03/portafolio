@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { HiDocumentArrowDown } from "react-icons/hi2";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -64,6 +65,14 @@ export default function TextAnimated() {
                         <a href="https://github.com/JulioVillalobos03" target="_blank" rel="noopener noreferrer" className="hover:text-[#541FA3FF] transition">
                             <FaGithub />
                         </a>
+                        <a
+                                                    href={`${import.meta.env.BASE_URL}assets/cv/CV Julio Alberto Ocampo Villalobos.pdf`}
+                                                    download="JulioVillalobos_CV.pdf"
+                                                    className="hover:text-[#3B82F6] transform hover:-translate-y-1 transition duration-300"
+                                                    aria-label="Descargar CV"
+                                                >
+                                                    <HiDocumentArrowDown />
+                                                </a>
                     </div>
                 </div>
             </div>
